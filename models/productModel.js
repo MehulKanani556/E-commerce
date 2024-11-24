@@ -30,7 +30,7 @@ var productSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    quantity:{
+    quantity: {
         type: Number,
         required: true,
     },
@@ -38,18 +38,16 @@ var productSchema = new mongoose.Schema({
         type: Number,
         default: 0,
     },
-    images:[],
-    color: {
-        type: String,
-        required: true,
-    },
+    images: [],
+    color: [],
+    tags:[],
     ratings: [{
         star: Number,
         comment: String,
         postedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 
     }],
-    totalRating:{
+    totalRating: {
         type: String,
         default: 0
     }
